@@ -1,7 +1,9 @@
 # JavaScriptBasic
 
 :::info
+
 ## Chrome
+
 <font color = green>
 更多工具 -> 開發人員工具 -> Console
 輸入第一個JS指令</br>
@@ -14,18 +16,22 @@ if(js === 'data')
 :::
 
 :::info
-## JavaScript版本
+
+## JavaScript 版本
+
 ES5</br>
 ES=ECMAScript</br>
-5巨大改版的第一版</br></br>
-ES6 = 2015年發布</br>
-2015年後，每年更新一版</br>
-ES11 = 2020年發布</br>
-ES13 = 2022年發布</br>
+5 巨大改版的第一版</br></br>
+ES6 = 2015 年發布</br>
+2015 年後，每年更新一版</br>
+ES11 = 2020 年發布</br>
+ES13 = 2022 年發布</br>
 :::
 
 :::info
-## 在HTML內執行JavaScript
+
+## 在 HTML 內執行 JavaScript
+
 <font color = red>
     不推薦這樣使用，對於維護極為不易，沒有分離關注點
 </font>
@@ -35,7 +41,7 @@ ES13 = 2022年發布</br>
 <html lang="en">
 
 <head>
-  
+
     /*此處是JavaScript*/
   <script>
     let data = '123';
@@ -50,10 +56,13 @@ ES13 = 2022年發布</br>
 
 </html>
 ```
+
 :::
 
 :::info
-## 將HTML與JavaScript分離
+
+## 將 HTML 與 JavaScript 分離
+
 <font color = red>
     推薦這樣使用，對於維護方便，分離關注點</br>
     HTML呼叫js
@@ -70,6 +79,7 @@ const ageSarah = now - 2018;
 console.log(now - 1991 > now - 2018);
 alert(century)
 ```
+
 <font color = green>
 以下為index.html
 </font>
@@ -90,19 +100,24 @@ alert(century)
 
 </html>
 ```
+
 :::
 
 :::info
+
 ## 打印方法
+
 console.log(123)</br>
 <font color = red>
-可以在Chrome開發人員Console內看到打印值
+可以在 Chrome 開發人員 Console 內看到打印值
 </font>
 :::
 
 ## 基本語法
+
 :::info
 檢查型態</br>
+
 ```javascript=
 console.log(typeof true)
 回傳boolen(原始型態)
@@ -117,7 +132,8 @@ console.log(typeof null)
 回傳object
 ```
 
-let允許中途轉型態
+let 允許中途轉型態
+
 ```javascript=
 let data = 123
 console.log(typeof data)
@@ -128,12 +144,13 @@ console.log(typeof data)
 number
 string
 ```
+
 </br>
 :::
 
 :::info
-let、const於ES6開始提供使用
-var是舊版本就提供的，應避免使用此，改使用let
+let、const 於 ES6 開始提供使用
+var 是舊版本就提供的，應避免使用此，改使用 let
 
 ```javascript=
 const year = 1991;
@@ -158,22 +175,29 @@ console.log(month);
 let day = 20;
 // let day = 23;
 console.log(day);
+
+//作用域
+let check = true;
+if (check) {
+  var data = [123, 3, 3];
+  let data2 = [222, 3, 4];
+}
+console.log(`data = ${data}`);
 ```
 
 不宣告直接使用的變數，作用愈是全域，應避免此方法使用
+
 ```javascript=
 work = '123'
 console.log(work)
 ```
+
 :::
 
 :::info
-js的運算符包含</br>
-+加</br>
--減</br>
-*乘</br>
+js 的運算符包含</br> +加</br> -減</br> \*乘</br>
 /除</br>
-**次方</br>
+\*\*次方</br>
 %餘數</br>
 
 比較符</br>
@@ -181,7 +205,7 @@ js的運算符包含</br>
 
 == 與 ===差異是</br>
 == 僅需數值相等即可</br>
-=== 必須要object也相同(記憶體位置相等的意思)</br>
+=== 必須要 object 也相同(記憶體位置相等的意思)</br>
 
 ```javascript=
 const age = '18'
@@ -204,19 +228,21 @@ if (age !== 18) {
 
 邏輯操作符
 
-!反向，0以外的!後變false，!0會等於true</br>
+!反向，0 以外的!後變 false，!0 會等於 true</br>
 !-2 = false， !20=false</br>
 !0 = true</br>
 &&</br>
 ||</br>
 
 字串運用
+
 ```javascript=
 let string = "123 " + " 456";
 console.log(string);
 ```
 
 字串引入值方法
+
 ```javascript=
 let name1 = 'apple';
 //使用``
@@ -224,6 +250,7 @@ console.log(`string = ${name1}`);
 ```
 
 字串換行與串接
+
 ```javascript=
 //\是字串與下一行串接用
 //\n是輸出時的換行符號
@@ -235,6 +262,7 @@ console.log(string);
 ```
 
 允許將結果給予多個變數
+
 ```javascript=
 let x;
 let y;
@@ -244,7 +272,8 @@ console.log(x, y, z);
 //輸出60 60 60
 ```
 
-5個在js判斷為false
+5 個在 js 判斷為 false
+
 ```javascript=
 // 0, undefined, null, NaN, ''
 console.log(Boolean(0))
@@ -253,10 +282,12 @@ console.log(Boolean(null))
 console.log(Boolean(NaN))
 console.log(Boolean(''))
 ```
+
 :::
 
 :::info
-String轉Number
+String 轉 Number
+
 ```javascript=
 const year = '1991'
 console.log(typeof Number(year))
@@ -276,10 +307,11 @@ if (isNaN(Number(fileName))) {
 }
 //輸出is NaN
 ```
+
 :::
 
 :::info
-判斷式用法與Java一樣
+判斷式用法與 Java 一樣
 if、switch</br>
 `let data = xxx > 10 ? true : false`
 :::

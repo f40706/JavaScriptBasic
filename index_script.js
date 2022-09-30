@@ -26,6 +26,14 @@ let day = 20;
 let day = 23;
 console.log(day); */
 
+/* //作用域
+let check = true;
+if (check) {
+  var data = [123, 3, 3];
+  let data2 = [222, 3, 4];
+}
+console.log(`data = ${data}`); */
+
 // work = '123'
 // console.log(work)
 
@@ -69,17 +77,17 @@ console.log(x, y, z); */
 // console.log(Boolean(NaN))
 // console.log(Boolean(''))
 
-const age = '18'
+const age = "18";
 if (age == 18) {
-    console.log("OK1")
+  console.log("OK1");
 }
 if (age === 18) {
-    console.log("OK2")
+  console.log("OK2");
 }
 
 if (age != 18) {
-    console.log("! OK1")
+  console.log("! OK1");
 }
 if (age !== 18) {
-    console.log("! OK2")
+  console.log("! OK2");
 }
